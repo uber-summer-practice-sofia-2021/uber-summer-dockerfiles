@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  server:
+    container_name: node_devserver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    command: ["npm", "run", "watch:dev"]
