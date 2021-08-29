@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  server:
+    working_dir: /app
+    image: cosmtrek/air
+    container_name: golang_devserver
+    volumes:
+      - .:/app
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp

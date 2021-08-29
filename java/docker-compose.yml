@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+      - target: 35729
+        published: 35729
+        protocol: tcp
+    volumes:
+      - .:/app
+    command: ./gradlew --project-cache-dir /tmp/gradle-cache bootRun
