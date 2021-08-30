@@ -17,7 +17,7 @@ The example project for each programming language creates a web server running a
 
 ## Getting Started
 
-Before starting please get familiar with what [Docker](https://docs.docker.com/get-started/overview/) and [Docker Compose](https://docs.docker.com/compose/).
+Before starting please get familiar with what [Docker](https://docs.docker.com/get-started/overview/) and [Docker Compose](https://docs.docker.com/compose/) are.
 
 [This](https://runnable.com/blog/a-better-dev-workflow-with-docker-compose) is also a good overview of pros and cons when using Docker Compose for local development.
 
