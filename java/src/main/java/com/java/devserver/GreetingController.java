@@ -1,4 +1,4 @@
-package com.dev.server;
+package com.java.devserver;
 
 import java.util.concurrent.atomic.AtomicLong;
 

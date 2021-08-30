@@ -1,9 +1,17 @@
 version: '3.7'
 services:
+  watcher:
+    image: java-nodemon-dev-server
+    depends_on:
+      - app
+    volumes:
+      - .:/app
+    command: nodemon -e java -w /app/src -x '/app/mvnw --settings pom.xml compile'
   app:
     build:
       context: .
       dockerfile: Dockerfile
+    image: java-nodemon-dev-server
     ports:
       - target: 5000
         published: 5000
@@ -13,4 +21,4 @@ services:
         protocol: tcp
     volumes:
       - .:/app
-    command: ./gradlew --project-cache-dir /tmp/gradle-cache bootRun
+    command: ./mvnw --settings pom.xml spring-boot:run
