@@ -8,6 +8,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN ./mvnw --settings pom.xml install
+RUN ./mvnw --settings pom.xml clean install
 
 CMD [ "./mvnw", "--settings", "pom.xml", "spring-boot:run" ]
